@@ -1,0 +1,35 @@
+{
+  "name": "github-private-repos",
+  "version": "1.0.0",
+  "description": "Script para tornar todos os repositórios públicos do GitHub privados usando a API do GitHub.",
+  "main": "make_private.js",
+  "scripts": {
+    "start": "node make_private.js"
+  },
+  "keywords": [
+    "github",
+    "private",
+    "repositories",
+    "automation"
+  ],
+  "author": {
+    "name": "Rodrigo Zan",
+    "email": "rodrigo.zandonadi.dev@gmail.com",
+    "url": "https://rodrigozan.com"
+  },
+  "github": {
+    "repository": "https://github.com/rodrigozan/github-private-repos",
+    "bugs": {
+      "url": "https://github.com/rodrigozan/github-private-repos/issues"
+    },
+    "homepage": "https://github.com/rodrigozan/github-private-repos#readme"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^21.1.0",
+    "dotenv": "^16.4.7"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
