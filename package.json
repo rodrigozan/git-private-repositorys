@@ -18,11 +18,11 @@
     "url": "https://rodrigozan.com"
   },
   "github": {
-    "repository": "https://github.com/rodrigozan/github-private-repos",
+    "repository": "https://github.com/rodrigozan/git-private-repositorys",
     "bugs": {
-      "url": "https://github.com/rodrigozan/github-private-repos/issues"
+      "url": "https://github.com/rodrigozan/git-private-repositorys/issues"
     },
-    "homepage": "https://github.com/rodrigozan/github-private-repos#readme"
+    "homepage": "https://github.com/rodrigozan/git-private-repositorys#readme"
   },
   "license": "MIT",
   "dependencies": {
