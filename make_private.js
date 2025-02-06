@@ -1,27 +1,36 @@
 require('dotenv').config();
-const { Octokit } = require("@octokit/rest");
 
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+(async () => {
+  const { Octokit } = await import("@octokit/rest");
 
-async function makeReposPrivate() {
-  try {
-    const { data: repos } = await octokit.repos.listForAuthenticatedUser({ per_page: 100 });
+  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
-    for (const repo of repos) {
-      if (!repo.private) {
-        console.log(`Tornando privado: ${repo.name}`);
-        await octokit.repos.update({
-          owner: process.env.GITHUB_USERNAME,
-          repo: repo.name,
-          private: true
-        });
+  async function makeReposPrivate() {
+    try {
+      const { data: repos } = await octokit.repos.listForAuthenticatedUser({ per_page: 100 });
+
+      for (const repo of repos) {
+        if (!repo.private) {
+          console.log(`Tornando privado: ${repo.name}`);
+          try {
+            await octokit.repos.update({
+              owner: process.env.GITHUB_USERNAME,
+              repo: repo.name,
+              private: true
+            });
+            console.log(`Repositório ${repo.name} agora é privado.`);
+          } catch (updateError) {
+            console.error(`Erro ao tornar o repositório ${repo.name} privado:`, updateError.message);
+            // Continuar para o próximo repositório
+          }
+        }
       }
+
+      console.log("Processamento concluído. Alguns repositórios podem não ter sido atualizados.");
+    } catch (error) {
+      console.error("Erro geral:", error);
     }
-
-    console.log("Todos os repositórios públicos foram tornados privados!");
-  } catch (error) {
-    console.error("Erro:", error);
   }
-}
 
-makeReposPrivate();
+  makeReposPrivate();
+})();
