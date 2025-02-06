@@ -1,90 +1,90 @@
-# 🚀 **GitHub** Private Repos
+# 🚀 **GitHub Private Repos**
 
-Este script automatiza o processo de tornar todos os seus repositórios públicos do **GitHub** em privados usando a __API__ do **GitHub** e **Node.js**.
+This script automates the process of making all your **GitHub** public repositories private using the **GitHub API** and **Node.js**.
 
-## 📌 Recursos
+## 📌 Features
 
-✅ Converte automaticamente todos os repositórios públicos em privados  
-✅ Usa a __API__ do **GitHub** via `@octokit/rest`  
-✅ Gerenciamento de credenciais via `.env`  
-✅ Fácil de usar e configurar  
+✅ Automatically converts all public repositories to private  
+✅ Uses the **GitHub API** via `@octokit/rest`  
+✅ Credential management via `.env`  
+✅ Easy to use and configure  
 
 ---
 
-## 📦 Instalação
+## 📦 Installation
 
-1. **Clone o repositório**  
+1. **Clone the repository**  
     ```sh
     git clone https://github.com/rodrigozan/git-private-repositoryss.git
     cd github-private-repos
     ```
 
-2. **Instale as dependências**  
+2. **Install dependencies**  
     ```sh
     npm install
     ```
 
 ---
 
-## 🔑 Configuração
+## 🔑 Configuration
 
-Antes de rodar o script, você precisa de um **GitHub Personal Access Token** com a permissão `repo` ativada.
+Before running the script, you need a **GitHub Personal Access Token** with the `repo` permission enabled.
 
-### **Gerando o Token**
-1. Acesse [GitHub Developer Settings](https://github.com/settings/tokens)
-2. Clique em **"Generate new token (classic)"**
-3. Selecione **"repo"** para permitir acesso aos seus repositórios
-4. Copie o token gerado
+### **Generating the Token**
+1. Go to [GitHub Developer Settings](https://github.com/settings/tokens)
+2. Click **"Generate new token (classic)"**
+3. Select **"repo"** to allow access to your repositories
+4. Copy the generated token
 
-### **Criando o arquivo `.env`**
-Crie um arquivo `.env` na raiz do projeto e adicione:
+### **Creating the `.env` file**
+Create a `.env` file in the project root and add:
 
-    ```env
-    GITHUB_TOKEN=seu_token_aqui
-    GITHUB_USERNAME=seu_usuario
-    ```
+   ```env
+   GITHUB_TOKEN=your_token_here
+   GITHUB_USERNAME=your_username
+   ```
 
-Substitua `seu_token_aqui` pelo seu token de acesso e `seu_usuario` pelo seu nome de usuário do **GitHub**.
-
----
-
-## ▶️ Uso
-
-Para rodar o script, basta executar:
-
-    ```sh
-    npm start
-    ```
-
-O script irá buscar todos os seus repositórios públicos e convertê-los para privados.
+Replace `your_token_here` with your access token and `your_username` with your **GitHub** username.
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## ▶️ Usage
+
+To run the script, simply execute:
+
+   ```sh
+   npm start
+   ```
+
+The script will fetch all your public repositories and convert them to private.
+
+---
+
+## 🛠 Technologies Used
 
 - [Node.js](https://nodejs.org/)
-- [@octokit/rest](https://github.com/octokit/rest.js) (GitHub __API__)
-- [dotenv](https://github.com/motdotla/dotenv) (Gerenciamento de variáveis de ambiente)
+- [@octokit/rest](https://github.com/octokit/rest.js) (GitHub **API**)
+- [dotenv](https://github.com/motdotla/dotenv) (Environment variable management)
 
 ---
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está licenciado sob a licença [MIT](LICENSE).
-
----
-
-## 📢 Contribuições
-
-Contribuições são bem-vindas! Se quiser melhorar o script, sinta-se à vontade para abrir um **Pull Request**.
+This project is licensed under the [MIT](LICENSE) license.
 
 ---
 
-## 🐞 Relatar Problemas
+## 📢 Contributions
 
-Se encontrar algum problema, abra uma **issue** em:  
+Contributions are welcome! If you want to improve the script, feel free to open a **Pull Request**.
+
+---
+
+## 🐞 Report Issues
+
+If you encounter any issues, open an **issue** at:  
 [https://github.com/rodrigozan/git-private-repositoryss/issues](https://github.com/rodrigozan/git-private-repositoryss/issues)
 
 ---
 
-🚀 **Automatize seu **GitHub** e mantenha seus projetos privados com facilidade!**
+🚀 **Automate your **GitHub** and keep your projects private with ease!**
